@@ -8,7 +8,8 @@ const Navbar = () => {
     <div>
       <nav
         className="navbar navbar-expand-lg navbar-light 
-                bg-dark bg-opacity-75 fixed-top text-light"
+                fixed-top text-light"
+        style={{ backgroundColor: "#2DB973", fontFamily: "Times New Roman" }}
       >
         <div className="container">
           <Link
@@ -16,7 +17,7 @@ const Navbar = () => {
                         text-light font-bold"
             href="/"
           >
-            GFG Blogs
+            Caroline's Blog
           </Link>
           <button
             className="navbar-toggler"
@@ -30,8 +31,8 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
+            <ul className="navbar-nav">
+              <li className="nav-item d-flex mr-auto">
                 <Link
                   href="/"
                   className="nav-item nav-link 
@@ -46,7 +47,7 @@ const Navbar = () => {
                   className="nav-item nav-link 
                                                text-light"
                 >
-                  Create new Blog
+                  Create Blog
                 </Link>
               </li>
             </ul>

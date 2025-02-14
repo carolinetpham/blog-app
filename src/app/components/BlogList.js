@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Navbar";
 import Link from "next/link";
+import { MdDelete } from "react-icons/md";
 
 function BlogList() {
   const [data, setData] = useState([]);
@@ -18,6 +19,12 @@ function BlogList() {
 
   const toggleExpanded = (id) => {
     setExpandedId(expandedId === id ? null : id);
+  };
+
+  const deletePost = (id) => {
+    const updatedData = data.filter((item) => item.id !== id);
+    setData(updatedData);
+    localStorage.setItem("myData", JSON.stringify(updatedData));
   };
 
   let filteredData = data;
@@ -65,6 +72,13 @@ function BlogList() {
                   <Link href={`/blog/${item.id}`}>
                     <button className="btn btn-primary">Read more</button>
                   </Link>
+                  <MdDelete
+                    onClick={() => deletePost(item.id)}
+                    style={{
+                      color: "red",
+                      width: "300px",
+                    }}
+                  ></MdDelete>
                 </div>
               </div>
             </div>
