@@ -1,3 +1,5 @@
+Starter code / tutorial by [geeksforgeeks](https://www.geeksforgeeks.org/blogging-platform-using-next-js/)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
